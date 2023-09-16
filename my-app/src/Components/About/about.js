@@ -4,7 +4,7 @@ import AboutImg from './aboutImg.jpg';
 {/*Photo by Phil Evenden: https://www.pexels.com/photo/eight-during-training-16981635/ */}
 const About = () => {
   return (
-    <div className="About">
+    <div className="about">
         <h1>About</h1>
         <p>
           The Victorian Rowers Boathouse Club (VBRC) was established in 1994 by a first division quad crew following the completion of their highschool studies with the financial backing of their parents as they feared if they were to join an already established rowing club that they may never row together again.<br/>

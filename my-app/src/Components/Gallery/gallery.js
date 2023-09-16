@@ -27,9 +27,9 @@ const Gallery = () => {
   const galleryList = galleryItems.map((gallery,index) => <li key={index}>{gallery}</li>);
 
   return (
-    <div className="TheTeam">
-      <h3>The Team</h3>
-      <ul>{galleryList}</ul>
+    <div className="gallery">
+      <h3>Gallery</h3>
+      <ul className="imgPreviewRow">{galleryList}</ul>
     </div>
     );
 };

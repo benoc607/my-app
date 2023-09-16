@@ -5,9 +5,9 @@ import TitleImg from './titleImg.jpg';
 
 const Header = () => {
   return (
-    <div className="Header">
+    <div className="home">
         <h1>Victorian Rowers Boathouse Club<br/>VRBC</h1>
-        <img src={TitleImg} className="titleImg" alt="Title Image" />
+        <img src={TitleImg} className="titleImg" alt="Octuple scull on angle rowing away" />
     </div>
     );
 };

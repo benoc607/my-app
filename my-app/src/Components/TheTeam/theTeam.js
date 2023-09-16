@@ -15,18 +15,28 @@ import TeamImg05 from './teamImg05.jpg';
 const TheTeam = () => {
 
   const teamItems = [
-    <img className="imgPreview" src={TeamImg01} onclick="currentSlide(1)" alt="Coxsawin - Name"/>, 
-    <img className="imgPreview" src={TeamImg02} onclick="currentSlide(1)" alt="Stroke - Name"/>, 
-    <img className="imgPreview" src={TeamImg03} onclick="currentSlide(1)" alt="2nd Seat - Name"/>, 
-    <img className="imgPreview" src={TeamImg04} onclick="currentSlide(1)" alt="3rd Seat - Name"/>, 
-    <img className="imgPreview" src={TeamImg05} onclick="currentSlide(1)" alt="4th Seat - Name"/>, 
+    <img className="imgPreview" src={TeamImg01} onclick="currentSlide(1)" alt="Coxsawin - Johnny"/>, 
+    <img className="imgPreview" src={TeamImg02} onclick="currentSlide(1)" alt="Stroke - Edmond"/>, 
+    <img className="imgPreview" src={TeamImg03} onclick="currentSlide(1)" alt="2nd Seat - Tristen"/>, 
+    <img className="imgPreview" src={TeamImg04} onclick="currentSlide(1)" alt="3rd Seat - Gav"/>, 
+    <img className="imgPreview" src={TeamImg05} onclick="currentSlide(1)" alt="4th Seat - Alex"/>, 
   ];
   const teamList = teamItems.map((team,index) => <li key={index}>{team}</li>);
 
+  const teamNames = [
+    <p className="teamNames">Coxsawin - Johnny</p>, 
+    <p className="teamNames">Stroke - Edmond</p>, 
+    <p className="teamNames">2nd Seat - Tristen</p>, 
+    <p className="teamNames">3rd Seat - Gav</p>, 
+    <p className="teamNames">4th Seat - Alex</p>, 
+  ];
+  const teamNamesList = teamNames.map((team,index) => <li key={index}>{team}</li>);
+
   return (
-    <div className="TheTeam">
-      <h3>The Team</h3>
-      <ul>{teamList}</ul>
+    <div className="theTeam">
+      <h2>The Team</h2>
+      <ul className="imgPreviewRow">{teamList}</ul>
+      <ul className="teamNamesRow">{teamNamesList}</ul>
     </div>
     );
 };
