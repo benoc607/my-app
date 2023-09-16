@@ -1,0 +1,275 @@
+/* Default page styling */
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #000000;
+    background-color: #99CCFF;
+}
+
+/* add margin and top spacing to ensure nav bar doesnt cover title when navigating*/
+section {padding: 30px 50px;}
+
+/* default heading colour*/
+h1, h2, h3 {color: #14522e;}
+
+/* For when screen width too small for full nav bar */
+@media screen and (max-width:850px) {   
+
+}
+
+
+/* Header Styling, centre title on img*/
+#home {
+    text-align: center;
+    z-index: 90;
+    width: 100%;
+}
+#home h1 {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 95;
+}
+#titleImg {
+    width: 100%;
+}
+
+/* Nav links styling*/
+#navMenu a:link {
+    color: #0000FF;
+    background-color: #FFFF00; 
+}
+#navMenu a:hover, #navMenu a:active {background-color: #caca00;}
+#navMenu a:active {text-decoration-line: underline;}
+
+/* Nav bar fixed at top of screen, full width, not visible on load*/
+nav {
+    position: fixed;
+    width: 100%; 
+    display: inline-flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #808080;
+    z-index: 100;
+    opacity: 0;
+}
+/* Remove bullet points, remove any white space*/
+#navMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+}
+/* ensure they are next to each other and no white space*/
+#navMenu li{
+    float: left;     
+    margin-top: 0;   
+    font-size: 20px;    
+    overflow: hidden;
+}
+/* Centre each item in a block with appropriate padding*/
+#navMenu li a {
+    display: block;  
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* about section styling*/
+#about {
+    background-color: #6fbeff;
+}
+
+/* timetable section styling*/
+#timetable {
+    background-color: #6fbeff;
+}
+#timetable table, td, th {
+    border: 1px solid;
+}
+#timetable table {
+    background-color: #808080;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 6px 2px #808080;
+}
+#timetable td {
+    background-color: #99CCFF;
+}
+#timetable th {
+    background-color: #50b0ff;
+}
+/* Make beginner trial buttons blend in*/
+#beginnerTrial {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #99CCFF;
+}
+#beginnerTrial2 {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: #6fbeff;
+}
+#beginnerTrial2:hover, #beginnerTrial:hover{
+    text-decoration-line: underline;
+    color: blue;
+}
+
+
+/* Create extra space between columns, using table to indent*/
+.openHours {
+    padding-right: 20px;
+}
+
+
+/* team section styling*/
+/* add margin so not overlapping with next section*/
+#theTeam {margin-bottom: 220px;}
+/* add gap between blocks*/
+#theTeam li{
+    float: left;
+    width: 15%;
+    margin: 10px 2.5%;  
+    overflow: hidden;
+    text-align: center;
+}
+#theTeam .imgPreviewRow {
+    width: 100%;
+}
+/* so names line up under their corresponding photos*/
+#teamNames {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+#theTeam p {text-align: center;}
+/* for when using centre img, not paragraph
+#theTeam .imgMain {
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+/* gallery section styling*/
+#gallery {
+    padding-top: 20px;
+}
+#gallery img {
+    width: 100%;
+}
+.imgPreviewRow {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+/* 16.66% as 6 items needing to span over 100%*/
+#gallery .imgPreviewRow li{
+    float: left;     
+    width: 16.66%;
+    margin-top: 0;  
+    overflow: hidden;
+}
+.imgPreviewRow li img {
+    display: block;  
+}
+.imgPreview{
+    opacity: 0.65
+}
+.imgActive, .imgPreview:hover {
+    opacity: 1
+}
+
+.imgMain {
+    display: none;
+}
+video {
+    width: 100%;
+}
+
+#contactUs {
+    background-color: #6fbeff;
+}
+#contactUs td{
+    border: none;
+}
+#contactUs a {
+    color: #000000;
+}
+#contactUs address {
+    width: 50%;
+    float: left;
+    display: block;
+}
+#contactUs iframe {
+    width: 600px;
+    height: 450px;
+    border-color: #000000;
+}
+
+
+#contactForm {
+    border-style: solid;
+    background-color: #50b0ff;
+    width: 30%;
+}
+#contactForm textarea{
+    width: 90%;
+    height: 100px;
+}
+#contactForm p {
+    font-size: 10px;
+}
+
+/* Footer styling */
+footer {
+    width: 100%;
+    background-color: #808080;
+}
+footer p {
+    margin-left: 50px;
+}
+footer address {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 25%;
+    display:flex; 
+}
+footer address a {
+    float: left;     
+    text-align: center;
+    padding: 14px 14px;
+    font-size: 17px;    
+    overflow: hidden; 
+}
+footer address a:hover {
+    text-decoration-line: underline;
+    background-color: #6e6e6e;
+}
+footer button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 33%;
+    background-color: #808080;
+}
+footer button:hover{
+    text-decoration-line: underline;
+    background-color: #6e6e6e;
+}
