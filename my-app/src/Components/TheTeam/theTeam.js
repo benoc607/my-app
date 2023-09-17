@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import "../../App.css";
 import TeamImg01 from './teamImg01.jpg';
 import TeamImg02 from './teamImg02.jpg';
 import TeamImg03 from './teamImg03.jpg';
@@ -13,15 +14,15 @@ import TeamImg05 from './teamImg05.jpg';
 
 
 const TheTeam = () => {
-
+  const [readMore,setReadMore]=useState(false);
   const teamItems = [
-    <img className="imgPreview" src={TeamImg01} onclick="currentSlide(1)" alt="Coxsawin - Johnny"/>, 
-    <img className="imgPreview" src={TeamImg02} onclick="currentSlide(1)" alt="Stroke - Edmond"/>, 
-    <img className="imgPreview" src={TeamImg03} onclick="currentSlide(1)" alt="2nd Seat - Tristen"/>, 
-    <img className="imgPreview" src={TeamImg04} onclick="currentSlide(1)" alt="3rd Seat - Gav"/>, 
-    <img className="imgPreview" src={TeamImg05} onclick="currentSlide(1)" alt="4th Seat - Alex"/>, 
+    <img className="imgPreview" src={TeamImg01} /*onClick={currentSlide(1)}*/ alt="Image of Coxsawin - Johnny"/>, 
+    <img className="imgPreview" src={TeamImg02} /*onClick={currentSlide(2)}*/ alt="Image of Stroke - Edmond"/>, 
+    <img className="imgPreview" src={TeamImg03} /*onClick={currentSlide(3)}*/ alt="Image of 2nd Seat - Tristen"/>, 
+    <img className="imgPreview" src={TeamImg04} /*onClick={currentSlide(4)}*/ alt="Image of 3rd Seat - Gav"/>, 
+    <img className="imgPreview" src={TeamImg05} /*onClick={currentSlide(5)}*/ alt="Image of 4th Seat - Alex"/>, 
   ];
-  const teamList = teamItems.map((team,index) => <li key={index}>{team}</li>);
+  const teamList = teamItems.map((teamPhoto,index) => <li key={index}>{teamPhoto}</li>);
 
   const teamNames = [
     <p className="teamNames">Coxsawin - Johnny</p>, 
@@ -30,13 +31,24 @@ const TheTeam = () => {
     <p className="teamNames">3rd Seat - Gav</p>, 
     <p className="teamNames">4th Seat - Alex</p>, 
   ];
-  const teamNamesList = teamNames.map((team,index) => <li key={index}>{team}</li>);
+  const teamNamesList = teamNames.map((teamNames,index) => <li key={index}>{teamNames}</li>);
+
+  const teamInfo = [
+    <p className="teamInfo">The Coxsawin is Johnny who...</p>, 
+    <p className="teamInfo">The Stroke Edmond is a...</p>, 
+    <p className="teamInfo">The 2nd Seat Tristen...</p>, 
+    <p className="teamInfo">The 3rd Seat Gav begun...</p>, 
+    <p className="teamInfo">The 4th Seat Alex found...</p>, 
+  ];
+  const teamInfoList = teamInfo.map((team,index) => <li key={index}>{team}</li>);
+
 
   return (
     <div className="theTeam">
       <h2>The Team</h2>
       <ul className="imgPreviewRow">{teamList}</ul>
       <ul className="teamNamesRow">{teamNamesList}</ul>
+      <ul className="teamInfoRow">{teamInfoList}</ul>
     </div>
     );
 };

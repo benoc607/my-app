@@ -1,3 +1,5 @@
+@import '~react-image-gallery/styles/css/image-gallery.css';
+
 /* Default page styling */
 .Website {
   font-family: Helvetica, Arial, sans-serif;
@@ -173,27 +175,26 @@ h1, h2, h3 {color: #14522e;}
 }
 
 
-#theTeam p {text-align: center;}
+.theTeam p {text-align: center;}
 
 
 /* gallery section styling*/
-.gallery {
+.gallery{
   padding-top: 20px;
 }
-.gallery img {
+.galleryCarousel{
+  padding-top: 20px;
+  margin-top: 5rem;;
   width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgb(146, 129, 242);
+  box-shadow: #2b15453d 1px 10px 10px 5px;
 }
+
 .imgPreviewRow {
   list-style-type: none;
   padding: 0;
   margin: 0; 
-}
-/* 16.66% as 6 items needing to span over 100%*/
-.gallery .imgPreviewRow li{
-  float: left;     
-  width: 16.66%;
-  margin-top: 0;  
-  overflow: hidden;
 }
 .imgPreviewRow li img {
   display: block; 
@@ -206,8 +207,18 @@ h1, h2, h3 {color: #14522e;}
   opacity: 1
 }
 
+.teamInfoRow{
+  list-style-type: none;
+}
+.teamInfo {
+  display: block;
+  width: 100%;
+}
 .imgMain {
   display: none;
+}
+.imgMainSelected {
+  display: block;
 }
 video {
   width: 100%;

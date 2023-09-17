@@ -1,10 +1,6 @@
 import React from "react";
-import GalleryImg01 from './galleryImg01.jpg';
-import GalleryImg02 from './galleryImg02.jpg';
-import GalleryImg03 from './galleryImg03.jpg';
-import GalleryImg04 from './galleryImg04.jpg';
-import GalleryImg05 from './galleryImg05.jpg';
-import GalleryImg06 from './galleryImg06.jpg';
+import ImageGallery from 'react-image-gallery';
+import GalleryVid01 from './galleryVid01.mp4';
 
 {/*01 Photo by RUN 4 FFWPU: https://www.pexels.com/photo/man-rowing-boat-3554634/ */}
 {/*02 Photo by Patrick Case: https://www.pexels.com/photo/photo-of-men-on-watercraft-3648325/ */}
@@ -13,23 +9,46 @@ import GalleryImg06 from './galleryImg06.jpg';
 {/*05 Photo by Patrick Case: https://www.pexels.com/photo/people-paddling-on-white-row-boat-3682409/ */}
 {/*06 Photo by Patrick Case: https://www.pexels.com/photo/woman-riding-kayak-on-river-3693080/ */}
 
+{/*01 Video by Pixabay: https://www.pexels.com/video/rowing-team-855863/ */}
 
 const Gallery = () => {
 
-  const galleryItems = [
-    <img className="imgPreview" src={GalleryImg01} onclick="currentSlide(1)" alt="Coxsawin - Name"/>, 
-    <img className="imgPreview" src={GalleryImg02} onclick="currentSlide(1)" alt="Stroke - Name"/>, 
-    <img className="imgPreview" src={GalleryImg03} onclick="currentSlide(1)" alt="2nd Seat - Name"/>, 
-    <img className="imgPreview" src={GalleryImg04} onclick="currentSlide(1)" alt="3rd Seat - Name"/>, 
-    <img className="imgPreview" src={GalleryImg05} onclick="currentSlide(1)" alt="4th Seat - Name"/>, 
-    <img className="imgPreview" src={GalleryImg06} onclick="currentSlide(1)" alt="4th Seat - Name"/>, 
+  const images = [
+    {
+      original: 'https://images.pexels.com/photos/3554634/pexels-photo-3554634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      thumbnail: 'https://images.pexels.com/photos/3554634/pexels-photo-3554634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    {
+      original: 'https://images.pexels.com/photos/3648325/pexels-photo-3648325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      thumbnail: 'https://images.pexels.com/photos/3648325/pexels-photo-3648325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    {
+      original: 'https://images.pexels.com/photos/8976508/pexels-photo-8976508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      thumbnail: 'https://images.pexels.com/photos/8976508/pexels-photo-8976508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    {
+      original: 'https://images.pexels.com/photos/8976604/pexels-photo-8976604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      thumbnail: 'https://images.pexels.com/photos/8976604/pexels-photo-8976604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    {
+      original: 'https://images.pexels.com/photos/3682409/pexels-photo-3682409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      thumbnail: 'https://images.pexels.com/photos/3682409/pexels-photo-3682409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    },
+    {
+      original: 'https://images.pexels.com/photos/3693080/pexels-photo-3693080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      thumbnail: 'https://images.pexels.com/photos/3693080/pexels-photo-3693080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    }
   ];
-  const galleryList = galleryItems.map((gallery,index) => <li key={index}>{gallery}</li>);
-
   return (
     <div className="gallery">
-      <h3>Gallery</h3>
-      <ul className="imgPreviewRow">{galleryList}</ul>
+      <h2>Gallery</h2>
+      <div className="galleryCarousel">
+        <ImageGallery 
+          items={images} 
+          autoPlay={true}
+        />   
+        <video src={GalleryVid01}  controls="controls" autoplay="false"/>  
+      </div>   
     </div>
     );
 };
