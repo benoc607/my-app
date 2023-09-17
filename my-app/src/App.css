@@ -1,3 +1,4 @@
+/* import styling sheet for image gallery carousel */
 @import '~react-image-gallery/styles/css/image-gallery.css';
 
 /* Default page styling */
@@ -7,17 +8,14 @@
   color: #000000;
   background-color: #99CCFF;
 }
-
 /* add margin and top spacing to ensure nav bar doesnt cover title when navigating*/
 .about, .theTeam, .timetable, .gallery, .contactUs {padding: 30px 50px;}
-
 /* default heading colour*/
 h1, h2, h3 {color: #14522e;}
 
-/* For when screen width too small for full nav bar */
-@media screen and (max-width:850px) {   
-
-}
+/* For when screen width too small for full nav bar 
+TO BE ADDED
+@media screen and (max-width:850px) {   }*/
 
 
 /* Header Styling, centre title on img*/
@@ -34,10 +32,9 @@ h1, h2, h3 {color: #14522e;}
   transform: translate(-50%, -50%);
   z-index: 95;
 }
-.titleImg {
-  width: 100%;
-}
+.titleImg {width: 100%;}
 
+/* Nav bar styling*/
 /* Nav links styling*/
 .navMenu a:link {
   color: #0000FF;
@@ -45,8 +42,7 @@ h1, h2, h3 {color: #14522e;}
 }
 .navMenu a:hover, .navMenu a:active {background-color: #caca00;}
 .navMenu a:active {text-decoration-line: underline;}
-
-/* Nav bar fixed at top of screen, full width, not visible on load*/
+/* Nav bar fixed at top of screen, full width*/
 .nav {
   position: fixed;
   width: 100%; 
@@ -56,7 +52,6 @@ h1, h2, h3 {color: #14522e;}
   right: 0;
   background-color: #808080;
   z-index: 100;
-  opacity: 1;
 }
 /* Remove bullet points, remove any white space*/
 .navMenu {
@@ -84,12 +79,61 @@ h1, h2, h3 {color: #14522e;}
 .about {
   background-color: #6fbeff;
 }
+/* about section alignment*/
 .about p, .aboutImg {
   width: 48%;
   padding-right: 2%;
   display: inline-block;
 }
 
+/* team section styling*/
+/* add gap between imgs and set size*/
+.theTeam img {
+  float: left;
+  height: 200px;
+  width: 15%;
+  margin: 10px 2.5%;  
+  object-fit: cover;
+  text-align: center;
+  list-style-type: none;
+}
+.imgPreviewRow {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.imgPreview{
+  opacity: 0.9;
+  list-style-type: none;
+  padding: 0;
+}
+.imgPreview:hover {
+  opacity: 1
+}
+/* so names line up under their corresponding photos*/
+.teamNames {
+  width: 16%;
+  margin: 10px 4% 0 0;
+  float: left;
+  list-style-type: none;
+  padding: 0;
+}
+.teamNamesRow {
+  list-style-type: none;
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* ensures placement is not offset on smaller width*/
+.teamInfoRow {
+  display: block;
+  width: 100%;
+  padding-top: 150px;
+}
+/* Centres all text, both names and athlete descriptions*/
+.theTeam p {text-align: center;}
 
 /* timetable section styling*/
 .timetable {
@@ -136,52 +180,8 @@ h1, h2, h3 {color: #14522e;}
   color: blue;
 }
 
-
-/* Create extra space between columns, using table to indent*/
-.openHours {
-  padding-right: 20px;
-}
-
-
-/* team section styling*/
-/* add margin so not overlapping with next section*/
-.theTeam {margin-bottom: 220px;}
-/* add gap between blocks*/
-.theTeam img {
-  float: left;
-  height: 200px;
-  width: 15%;
-  margin: 10px 2.5%;  
-  object-fit: cover;
-  text-align: center;
-}
-
-#theTeam .imgPreviewRow {
-  width: 100%;
-}
-/* so names line up under their corresponding photos*/
-.teamNames {
-  width: 16%;
-  margin: 10px 4% 60px 0;
-  float: left;
-  list-style-type: none;
-  padding: 0;
-  list-style-type: none;
-}
-.teamNamesRow {
-  list-style-type: none;
-  width: 100%;
-  margin-bottom: 100px;
-}
-
-
-.theTeam p {text-align: center;}
-
-
 /* gallery section styling*/
-.gallery{
-  padding-top: 20px;
-}
+/* visually style carousel*/
 .galleryCarousel{
   padding-top: 20px;
   margin-top: 5rem;;
@@ -190,82 +190,51 @@ h1, h2, h3 {color: #14522e;}
   border: 1px solid rgb(146, 129, 242);
   box-shadow: #2b15453d 1px 10px 10px 5px;
 }
+video {width: 100%;}
 
-.imgPreviewRow {
-  list-style-type: none;
-  padding: 0;
-  margin: 0; 
-}
-.imgPreviewRow li img {
-  display: block; 
-  height: 180px; 
-}
-.imgPreview{
-  opacity: 0.65
-}
-.imgActive, .imgPreview:hover {
-  opacity: 1
-}
-
-.teamInfoRow{
-  list-style-type: none;
-}
-.teamInfo {
-  display: block;
-  width: 100%;
-}
-.imgMain {
-  display: none;
-}
-.imgMainSelected {
-  display: block;
-}
-video {
-  width: 100%;
-}
-
-.contactUs {
-  background-color: #6fbeff;
-}
-.contactUs td{
-  border: none;
-}
-.contactUs a {
-  color: #000000;
-}
+/* contactUs section styling*/
+.contactUs {background-color: #6fbeff;}
+.contactUs a {color: #000000;}
 .contactUsInfo {
   width: 50%;
   float: left;
   display: block;
+  margin-bottom: 50px;
 }
 .contactUs iframe {
   width: 600px;
   height: 450px;
   border-color: #000000;
 }
-
-
+/* Create extra space between columns, using table to indent, hide table*/
+.contactUs td{border: none;}
+.openHours {
+  padding-right: 20px;
+}
+/* contactUs form styling */
 .contactForm {
   border-style: solid;
   background-color: #50b0ff;
   width: 30%;
 }
+.formTitle{
+  text-decoration: underline;
+  font-weight: bold;
+}
 .contactForm textarea{
   width: 90%;
   height: 100px;
 }
-.contactForm p {
-  font-size: 10px;
-}
+.contactForm p {font-size: 10px;}
+
 
 /* Footer styling */
 .footer {
   width: 100%;
   background-color: #808080;
 }
-.footer p {
-  margin-left: 50px;
-}
+.footer p {margin-left: 50px;}
+/* Align icons horizontally, with gaps between */
 .footerContactInfo {
   text-align: center;
   list-style-type: none;
@@ -280,10 +249,7 @@ video {
   font-size: 17px;    
   overflow: hidden; 
 }
-.footerContactInfo a:hover {
-  text-decoration-line: underline;
-  background-color: #6e6e6e;
-}
+/* button placement and blend in */
 .footer button {
   border: none;
   padding: 15px 32px;
@@ -296,7 +262,8 @@ video {
   width: 33%;
   background-color: #808080;
 }
-.footer button:hover{
+/* show selection on hover */
+.footer button:hover, .footerContactInfo a:hover{
   text-decoration-line: underline;
   background-color: #6e6e6e;
 }

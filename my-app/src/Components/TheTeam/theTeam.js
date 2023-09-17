@@ -14,13 +14,14 @@ import TeamImg05 from './teamImg05.jpg';
 
 
 const TheTeam = () => {
-  const [readMore,setReadMore]=useState(false);
+  const [value,setValue]=useState(0);
+
   const teamItems = [
-    <img className="imgPreview" src={TeamImg01} /*onClick={currentSlide(1)}*/ alt="Image of Coxsawin - Johnny"/>, 
-    <img className="imgPreview" src={TeamImg02} /*onClick={currentSlide(2)}*/ alt="Image of Stroke - Edmond"/>, 
-    <img className="imgPreview" src={TeamImg03} /*onClick={currentSlide(3)}*/ alt="Image of 2nd Seat - Tristen"/>, 
-    <img className="imgPreview" src={TeamImg04} /*onClick={currentSlide(4)}*/ alt="Image of 3rd Seat - Gav"/>, 
-    <img className="imgPreview" src={TeamImg05} /*onClick={currentSlide(5)}*/ alt="Image of 4th Seat - Alex"/>, 
+    <img className="imgPreview" src={TeamImg01} onClick={() => { setValue(0); }} alt="Image of Coxsawin - Johnny"/>, 
+    <img className="imgPreview" src={TeamImg02} onClick={() => { setValue(1); }} alt="Image of Stroke - Edmond"/>, 
+    <img className="imgPreview" src={TeamImg03} onClick={() => { setValue(2); }} alt="Image of 2nd Seat - Tristen"/>, 
+    <img className="imgPreview" src={TeamImg04} onClick={() => { setValue(3); }} alt="Image of 3rd Seat - Gav"/>, 
+    <img className="imgPreview" src={TeamImg05} onClick={() => { setValue(4); }} alt="Image of 4th Seat - Alex"/>, 
   ];
   const teamList = teamItems.map((teamPhoto,index) => <li key={index}>{teamPhoto}</li>);
 
@@ -48,7 +49,9 @@ const TheTeam = () => {
       <h2>The Team</h2>
       <ul className="imgPreviewRow">{teamList}</ul>
       <ul className="teamNamesRow">{teamNamesList}</ul>
-      <ul className="teamInfoRow">{teamInfoList}</ul>
+      <div className="teamInfoRow">
+        {teamInfo[value]}
+      </div>
     </div>
     );
 };

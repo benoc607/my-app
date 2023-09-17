@@ -29,9 +29,9 @@ const ContactUs = () => {
         </table>
         
         <h3>Email</h3>
-        <a href="mailto:103059157@student.swin.edu.au">103059157@student.swin.edu.au</a>
+        <a href="mailto:PLACEHOLDER@EXAMPLE.edu.au">PLACEHOLDER@EXAMPLE.edu.au</a>
         <h3>Call</h3>
-        <a href="tel:+61400111333">+61 400 111 333</a>
+        <a href="tel:+61400111XXX">+61 400 111 XXX</a>
       </div>
 
       <iframe 
@@ -43,22 +43,22 @@ const ContactUs = () => {
             
       <form className="contactForm" name="contact" method="post">
         <h3>Send us a Message</h3>
-        <label for="userName">Name:</label><br/>
-        <input className=""name="userName" placeholder="John Doe" required/><br/>
+        <label className="formTitle" for="userName">Name:</label><br/>
+        <input className="userName" name="userName" placeholder="John Doe" required/><br/><br/>
 
-        <label for="userEmail">Email:</label><br/>
-        <input name="userEmail" placeholder="johndoe@email.com" required/><br/>
+        <label className="formTitle" for="userEmail">Email:</label><br/>
+        <input className="userEmail" name="userEmail" placeholder="johndoe@email.com" required/><br/><br/>
 
-        <label for="userPhone">Phone Number:</label><br/>
-        <input name="userPhone" placeholder="04xx xxx xxx" required/><br/>
+        <label className="formTitle" for="userPhone">Phone Number:</label><br/>
+        <input name="userPhone" placeholder="04xx xxx xxx" required/><br/><br/>
 
-        <label for="contactMethod">Preferred Contact Method:</label><br/>
+        <label className="formTitle" for="contactMethod">Preferred Contact Method:</label><br/>
         <input className="contact_email" name="contactMethod" type="radio" value="email" required/>
         <label for="contact_email">Email</label><br/>
         <input className="contact_phone" name="contactMethod" type="radio" value="phone" required/>
-        <label for="contact_phone">Phone</label><br/>
+        <label for="contact_phone">Phone</label><br/><br/>
 
-        <label for="userMessage">Comment:</label><br/>
+        <label className="formTitle" for="userMessage">Comment:</label><br/>
         <textarea name="userMessage" placeholder="Your message..." required></textarea>
         <button name="submit" type="submit">Submit</button>
         <p><i>By submitting this form, you are acknowledging and accepting our 'Terms & Conditions'</i></p>
