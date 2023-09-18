@@ -8,18 +8,21 @@ import Timetable from './Components/Timetable/timetable';
 import Gallery from './Components/Gallery/gallery';
 import ContactUs from './Components/ContactUs/contactUs';
 import Footer from './Components/Footer/footer';
+import ErrorBoundary from './Components/ErrorBoundaries/errorBoundaries';
 
 function App() {
   return (
     <div className="Website">
-      <Header />
-      <Navigation />
-      <About />
-      <TheTeam />
-      <Timetable />
-      <Gallery />
-      <ContactUs />
-      <Footer />
+      <ErrorBoundary>
+        <Header />
+        <Navigation />
+        <About />
+        <TheTeam />
+        <Timetable />
+        <Gallery />
+        <ContactUs />
+        <Footer />
+      </ErrorBoundary>
     </div>
   );
 }

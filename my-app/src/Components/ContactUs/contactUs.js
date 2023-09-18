@@ -9,6 +9,11 @@ Photo by Burak The Weekender: https://www.pexels.com/photo/photo-of-sea-during-s
 {/* contactUs.js component displays contact info beside iframe of google maps for location
 below it displays an image beside a contact form with validated inputs, user is prompted if not valid*/}
 const ContactUs = () => {
+  {/*destructure the useForm object from library */}
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+  }
   return (
     <div className="contactUs">
       
@@ -30,16 +35,28 @@ const ContactUs = () => {
 
       <img src={contactUsImg} className="contactUsImg" alt="rowers at sunset" /> 
 
-      <form className="contactForm" name="contact" method="post">
+      <form className="contactForm" name="contact" onSubmit={handleSubmit(onSubmit)}>
         <h3>Send us a Message</h3>
         <label className="formTitle" for="userName">Name:</label><br/>
         <input className="userName" name="userName" placeholder="John Doe" required/><br/><br/>
 
         <label className="formTitle" for="userEmail">Email:</label><br/>
-        <input className="userEmail" name="userEmail" placeholder="johndoe@email.com" required/><br/><br/>
+        <input className="userEmail" name="userEmail" {...register("inputEmail",
+                            {
+                                required: true,
+                                pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                            })} placeholder="johndoe@email.com" />
+        {errors.inputEmail && <p>Please follow the email format of johndoe@email.com</p>} <br/><br/>
 
         <label className="formTitle" for="userPhone">Phone Number:</label><br/>
-        <input name="userPhone" placeholder="04xx xxx xxx" required/><br/><br/>
+        <input name="userPhone" {...register("inputPhone",
+                            {
+                                required: true,
+                                maxLength: 10,
+                                minLength: 10,
+                                pattern: /^[0-9]*$/
+                            })} placeholder="04xx xxx xxx" />
+        {errors.inputPhone && <p>Please ensure you use 10 digits and only input numbers</p>}<br/><br/>
 
         <label className="formTitle" for="contactMethod">Preferred Contact Method:</label><br/>
         <input className="contact_email" name="contactMethod" type="radio" value="email" required/>
