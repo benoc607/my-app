@@ -202,8 +202,9 @@ video {width: 100%;}
   margin-bottom: 50px;
 }
 .contactUs iframe {
-  width: 600px;
-  height: 450px;
+  width: 49%;
+  height: 500px;
+  display: inline-block;
   border-color: #000000;
 }
 /* Create extra space between columns, using table to indent, hide table*/
@@ -211,9 +212,19 @@ video {width: 100%;}
 .openHours {
   padding-right: 20px;
 }
+/* contactUs image styling*/
+.contactUsImg {
+  margin-top: 50px;
+  width: 50%;
+  display: inline-block;
+  box-shadow: 4px 4px 6px 4px #808080;
+}
 /* contactUs form styling */
 .contactForm {
+  margin-top: 50px;
+  margin-left: 10%;
   border-style: solid;
+  display: inline-block;
   background-color: #50b0ff;
   width: 30%;
 }

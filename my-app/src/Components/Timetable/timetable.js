@@ -1,5 +1,7 @@
 import React from "react";
 
+{/* timetable.js component displays training timetable with buttons to apply for beginner tryouts which prompt for user email */}
+
 {/*}Beginner trial signup, grab user email so further information can be sent re: what to expect */}
 function beginnerTrial() {
   let beginnerApplication = prompt("Please enter your email address to apply for our beginner session so we can confirm numbers and send you additional information. Come join us this Friday at 4:00pm!", "john.doe@email.com");

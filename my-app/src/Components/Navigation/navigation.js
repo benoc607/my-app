@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 
+{/* navigation.js component displays the page title over the top of an image */}
+
 const Navigation = () => {
   const [selectedNavItem, setSelectedNavItem] = useState("welcome");
   const navItems = [

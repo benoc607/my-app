@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import "../../App.css";
-import TeamImg01 from './teamImg01.jpg';
-import TeamImg02 from './teamImg02.jpg';
-import TeamImg03 from './teamImg03.jpg';
-import TeamImg04 from './teamImg04.jpg';
-import TeamImg05 from './teamImg05.jpg';
+import TeamImg01 from '../Media/teamImg01.jpg';
+import TeamImg02 from '../Media/teamImg02.jpg';
+import TeamImg03 from '../Media/teamImg03.jpg';
+import TeamImg04 from '../Media/teamImg04.jpg';
+import TeamImg05 from '../Media/teamImg05.jpg';
 
-{/*teamImg01 Photo by Ashford Marx: https://www.pexels.com/photo/male-with-mustache-and-hat-in-sunny-park-6501761/ */}
-{/*teamImg02 Photo by Monstera Production: https://www.pexels.com/photo/handsome-young-ethnic-guy-looking-at-camera-and-smiling-5384445/ */}
-{/*teamImg03 Photo by Laker : https://www.pexels.com/photo/black-man-in-hat-looking-at-camera-5792641/ */}
-{/*teamImg04 Photo by Ketut Subiyanto: https://www.pexels.com/photo/positive-bearded-young-indian-guy-in-turban-4307869/ */}
-{/*teamImg05 Photo by Erik Mclean: https://www.pexels.com/photo/stylish-young-bearded-man-looking-away-4110881/ */}
+{/* gallery.js component displays photos of team members and additional info text once picture is selected
+
+Copyright free media sources (in order of appearance):
+teamImg01 Photo by Ashford Marx: https://www.pexels.com/photo/male-with-mustache-and-hat-in-sunny-park-6501761/ 
+teamImg02 Photo by Monstera Production: https://www.pexels.com/photo/handsome-young-ethnic-guy-looking-at-camera-and-smiling-5384445/ 
+teamImg03 Photo by Laker : https://www.pexels.com/photo/black-man-in-hat-looking-at-camera-5792641/ 
+teamImg04 Photo by Ketut Subiyanto: https://www.pexels.com/photo/positive-bearded-young-indian-guy-in-turban-4307869/ 
+teamImg05 Photo by Erik Mclean: https://www.pexels.com/photo/stylish-young-bearded-man-looking-away-4110881/ */}
 
 
 const TheTeam = () => {

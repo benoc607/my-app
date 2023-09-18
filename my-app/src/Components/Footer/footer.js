@@ -1,16 +1,19 @@
 import React from "react";
 import { confirmAlert } from 'react-confirm-alert';
-import FacebookIcon from './facebook.png';
-import InstagramIcon from './instagram.png';
-import TwitterIcon from './twitter.png';
-import EmailIcon from './email.png';
-import PhoneIcon from './phone.png';
+import FacebookIcon from '../Media/facebookIcon.png';
+import InstagramIcon from '../Media/instagramIcon.png';
+import TwitterIcon from '../Media/twitterIcon.png';
+import EmailIcon from '../Media/emailIcon.png';
+import PhoneIcon from '../Media/phoneIcon.png';
 
-{/* "https://icons8.com/icon/13912/facebook" Facebook icon by "https://icons8.com" Icons8 */}
-{/* "https://icons8.com/icon/32323/instagram" Instagram icon by "https://icons8.com" Icons8 */}
-{/* "https://icons8.com/icon/13963/twitter" Twitter icon by "https://icons8.com" Icons8 */}
-{/* "https://icons8.com/icon/X0mEIh0RyDdL/email" Email icon by "https://icons8.com" Icons8 */}
-{/* "https://icons8.com/icon/jShwZ2RCyPSO/phone" Phone icon by "https://icons8.com" Icons8 */}
+{/* footer.js component displays links for contact/socials and terms & conditons + privacy statement
+
+Copyright free media sources (in order of appearance):
+"https://icons8.com/icon/13912/facebook" Facebook icon by "https://icons8.com" Icons8 
+"https://icons8.com/icon/32323/instagram" Instagram icon by "https://icons8.com" Icons8 
+"https://icons8.com/icon/13963/twitter" Twitter icon by "https://icons8.com" Icons8 
+"https://icons8.com/icon/X0mEIh0RyDdL/email" Email icon by "https://icons8.com" Icons8 
+"https://icons8.com/icon/jShwZ2RCyPSO/phone" Phone icon by "https://icons8.com" Icons8 */}
 
 
 {/*Display Terms and Conditions*/}

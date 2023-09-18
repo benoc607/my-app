@@ -1,7 +1,10 @@
 import React from "react";
-import TitleImg from './titleImg.jpg'; 
+import TitleImg from '../Media/headerImg01.jpg'; 
 
-{/*Photo by Patrick Case: https://www.pexels.com/photo/people-riding-boat-on-water-3693081/ */}
+{/* header.js component displays the page title over the top of an image
+
+Copyright free media sources:
+01 Photo by Patrick Case: https://www.pexels.com/photo/people-riding-boat-on-water-3693081/ */}
 
 const Header = () => {
   return (
