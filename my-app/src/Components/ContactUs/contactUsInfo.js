@@ -1,8 +1,6 @@
 import React from "react";
 
-
 {/* contactUsInfo.js component contains club contact info in its diplay format */}
-
 const ContactUsInfo = () => {
   return (
     <div className="contactUsInfo">

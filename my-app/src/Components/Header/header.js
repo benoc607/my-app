@@ -1,11 +1,10 @@
 import React from "react";
 import TitleImg from '../Media/headerImg01.jpg'; 
 
-{/* header.js component displays the page title over the top of an image
-
-Copyright free media sources:
+{/*Copyright free media sources:
 01 Photo by Patrick Case: https://www.pexels.com/photo/people-riding-boat-on-water-3693081/ */}
 
+{/* header.js component displays the page title over the top of an image */}
 const Header = () => {
   return (
     <div className="home">

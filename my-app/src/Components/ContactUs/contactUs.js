@@ -3,12 +3,11 @@ import ContactUsInfo from './contactUsInfo'
 import { useForm } from "react-hook-form";
 import contactUsImg from '../Media/contactUsImg01.jpg';
 
-{/* contactUs.js component displays contact info beside iframe of google maps for location
-below it displays an image beside a contact form with validated inputs, user is prompted if not valid
-
-Copyright free media sources:
+{/*Copyright free media sources:
 Photo by Burak The Weekender: https://www.pexels.com/photo/photo-of-sea-during-sunset-64201/ */}
 
+{/* contactUs.js component displays contact info beside iframe of google maps for location
+below it displays an image beside a contact form with validated inputs, user is prompted if not valid*/}
 const ContactUs = () => {
   return (
     <div className="contactUs">

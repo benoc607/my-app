@@ -3,9 +3,7 @@ import ImageGallery from 'react-image-gallery';
 import GalleryVid from '../Media/galleryVid01.mp4';
 import { images } from '../Media/galleryImages'
 
-{/* gallery.js component displays standalone video and image media in carousel with autoplay using react-image-gallery 
-
-Copyright free media sources (in order of appearance):
+{/*Copyright free media sources (in order of appearance):
 01 Photo by Patrick Case: https://www.pexels.com/photo/photo-of-men-on-watercraft-3648325/ 
 02 Photo by Barnabas Davoti: https://www.pexels.com/photo/a-man-rowing-a-boat-8976508/ 
 03 Photo by Barnabas Davoti: https://www.pexels.com/photo/men-rowing-together-on-the-lake-8976604/ 
@@ -13,6 +11,7 @@ Copyright free media sources (in order of appearance):
 05 Photo by Patrick Case: https://www.pexels.com/photo/woman-riding-kayak-on-river-3693080/ 
 01 Video by Pixabay: https://www.pexels.com/video/rowing-team-855863/ */}
 
+{/* gallery.js component displays standalone video and image media in carousel with autoplay using react-image-gallery */}
 const Gallery = () => {
 
   return (

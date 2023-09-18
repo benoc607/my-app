@@ -1,10 +1,10 @@
 import React from "react";
 import AboutImg from '../Media/aboutImg01.jpg';
 
-{/* about.js component displays text next to a photo
-
-Copyright free media sources:
+{/*Copyright free media sources:
 01 Photo by Phil Evenden: https://www.pexels.com/photo/eight-during-training-16981635/ */}
+
+{/* about.js component displays text next to a photo*/}
 const About = () => {
   return (
     <div className="about">

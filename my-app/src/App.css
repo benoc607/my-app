@@ -110,6 +110,7 @@ TO BE ADDED
   padding: 0;
 }
 .imgPreview:hover {
+  cursor: pointer;
   opacity: 1
 }
 /* so names line up under their corresponding photos*/
@@ -119,6 +120,7 @@ TO BE ADDED
   float: left;
   list-style-type: none;
   padding: 0;
+  cursor: pointer;
 }
 .teamNamesRow {
   list-style-type: none;
